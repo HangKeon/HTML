@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Grid</title>
+    <style>
+      #grid
+      {
+        border:5px solid pink;
+        display:grid;               /*이것만 쓰면 아무 의미가 없지만, 아래 줄을 쓰기 위한 것*/
+        grid-template-columns:150px 1fr;
+      }
+      div
+      {
+        border:5px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grid">
+      <div>NAVIGATION</div>
+      <div>ARTICLE</div>
+      </div>
+  </body>
+</html>
