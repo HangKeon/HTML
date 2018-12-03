@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Media Query</title>
+    <style>
+      div
+      {
+        border:10px solid green;
+        font-size:60px;
+      }
+      @@media(min-width:800px)      /*화면의 크기가 800px보다 큰 경우*/
+      {
+          div                       /*div 안에 있는 것들을 안보이게 함*/
+          {
+            display:none;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      RESPOSIVE
+    </div>
+  </body>
+</html>
