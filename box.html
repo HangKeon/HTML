@@ -5,7 +5,10 @@
     <title></title>
     <style>
       /*화면 전체를 쓰는 태그
-        block level element
+        block level element -> display:block;
+
+        화면에서 내용이 차지하는 만큼만 쓰는 태그
+        inline element      -> display:inline;
       */
       h1
       {
@@ -13,12 +16,12 @@
         padding:20px;         /*테두리 내부에 여백을 준다.*/
         margin:20px;           /*테두리 외부의 여백을 조절*/
         display:block;        /*h1의 경우 이것이 자동으로 적용된다. 따라서 굳이 쓸필요 x!!*/
+        width:100px           /*border의 가로 크기를 의미*/
         /*중복제거
         border-width:5px;
         border-color:red;
         border-style:solid;
         */
-        /*display:inline;     화면에서 자신이 쓰고 있는 부분까지만 쓰도록 하는 것*/
 
       }
 
