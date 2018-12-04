@@ -45,11 +45,23 @@
       {
         padding-left: 25px;
       }
+      @media(max-width:800px)              /*화면의 최대 크기가 800px*/
+      {
+        #grid                               /*800px보다 작은 경우 id=grid인 값이*/
+        {
+          display: block;                    /*block의 형태를 가지게 된다.*/
+        }
+        ol
+        {
+          border-right: none;
+        }
+        h1
+        {
+          border-bottom: none;
+        }
+      }
     </style>
-
-
   </head>
-
 
   <body>
 
