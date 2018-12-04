@@ -3,64 +3,8 @@
   <head>
     <title>JavaScript</title>
     <meta charset="utf-8">
-    <style>
-      body
-      {
-          margin: 0px;
-      }
-      a
-      {
-          color:black;
-          text-decoration: none;
-      }
-      #active
-      {
-        color: red;
-      }
-      h1
-      {
-        font-size: 100px;
-        text-align: center;
-        border-bottom: 1px solid gray;
-        margin: 0px;
-        padding: 20px;
-      }
-      ol
-      {
-        border-right: 1px solid gray;
-        width: 100px;
-        margin: 0px;
-        padding: 20px;
-      }
-      #grid
-      {
-        display: grid;
-        grid-template-columns: 150px 1fr;
-      }
-      #grid ol                              /*많은 ol중 부모로 id="grid"를 갖는 ol*/
-      {
-        padding-left: 33px;
-      }
-      #grid #article
-      {
-        padding-left: 25px;
-      }
-      @media(max-width:800px)              /*화면의 최대 크기가 800px*/
-      {
-        #grid                               /*800px보다 작은 경우 id=grid인 값이*/
-        {
-          display: block;                    /*block의 형태를 가지게 된다.*/
-        }
-        ol
-        {
-          border-right: none;
-        }
-        h1
-        {
-          border-bottom: none;
-        }
-      }
-    </style>
+    <!--여기에는 이제 style태그를 이용한 css 대신 style.css를 불러와서 사용할 것이다.-->
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
@@ -77,7 +21,7 @@
         <h2>JavaScript</h2>
 
         <p>
-          <a href="http://blog.naver.com/PostView.nhn?blogId=xchunho&logNo=220847180260" target="_blank" title="전생엘프">ASHINGTON — Paul Manafort,</a> President Trump’s former campaign chairman, repeatedly lied to federal investigators
+          <a href="https://www.naver.com" target="_blank" title="NAVER">ASHINGTON — Paul Manafort,</a> President Trump’s former campaign chairman, repeatedly lied to federal investigators
           in breach of a plea agreement he signed two months ago, the special counsel’s office said in a court filing late on Monday.
         </p>
 
