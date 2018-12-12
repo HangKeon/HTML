@@ -5,6 +5,46 @@
     <meta charset="utf-8">
     <!--여기에는 이제 style태그를 이용한 css 대신 style.css를 불러와서 사용할 것이다.-->
     <link rel="stylesheet" href="style.css">
+
+    <script>
+      function nightDayHandler(self)
+      {
+        var target = document.querySelector('body');
+        if(self.value === 'night')
+        {
+          target.style.backgroundColor='black';
+          target.style.color='white';
+          self.value = 'day';
+
+          var alist=document.querySelectorAll('a');
+          var i=0;
+          while(i<alist.length)
+          {
+            console.log(alist[i]);
+            alist[i].style.color='powderblue';
+            i++;
+          }
+
+        }
+        else
+        {
+          target.style.backgroundColor='white';
+          target.style.color='black';
+          self.value = 'night';
+
+          var alist=document.querySelectorAll('a');
+          var i=0;
+          while(i<alist.length)
+          {
+            console.log(alist[i]);
+            alist[i].style.color='blue';
+            i++;
+          }
+
+        }
+      }
+    </script>
+
   </head>
 
   <body>
@@ -20,6 +60,14 @@
       document.querySelector('body').style.color='black';
     ">
 -->
+<input type="button" value="night" onclick="
+  nightDayHandler(this);
+">
+
+
+
+
+<!--    이것을 위의 nightDayHandler()를 이용해 새롭게 사용한다.
     <input type="button" value="night" onclick="
       var target = document.querySelector('body');
       if(this.value === 'night')
@@ -55,6 +103,7 @@
 
       }
     ">
+-->
 
     <div id="grid">
         <ol>
