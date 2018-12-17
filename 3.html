@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 
     <script>
-      function nightDayHandler(self)
+      /*function nightDayHandler(self)
       {
         var target = document.querySelector('body');
         if(self.value === 'night')
@@ -42,7 +42,58 @@
           }
 
         }
+      }*/
+
+      function LinksSetColor(color)
+      {
+        var alist=document.querySelectorAll('a');
+        var i=0;
+        while(i<alist.length)
+        {
+          console.log(alist[i]);
+          alist[i].style.color=color;
+          i++;
+        }
       }
+
+      function BodySetColor(color)  //함수를 극한으로 사용하는 중
+      {
+        document.querySelector('body').style.color='color';
+      }
+
+      function BodySetBackgroundColor(color)  //함수를 극한으로 사용하는 중
+      {
+        document.querySelector('body').style.backgroundColor='color';
+      }
+
+      function nightDayHandler(self)
+      {
+        var target = document.querySelector('body');
+        if(self.value === 'night')
+        {
+          //target.style.backgroundColor='black';
+          BodySetBackgroundColor('black');
+          //target.style.color='white';
+          BodySetColor('white');
+          self.value = 'day';
+
+          LinksSetColor('powderblue');
+
+        }
+        else
+        {
+          //target.style.backgroundColor='white';
+          BodySetBackgroundColor('white');
+          //target.style.color='black';
+          BodySetColor('black');
+          self.value = 'night';
+
+
+          LinksSetColor('blue');
+
+        }
+      }
+
     </script>
 
   </head>
