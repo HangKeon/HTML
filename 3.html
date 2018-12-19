@@ -6,7 +6,9 @@
     <!--여기에는 이제 style태그를 이용한 css 대신 style.css를 불러와서 사용할 것이다.-->
     <link rel="stylesheet" href="style.css">
 
-    <script>
+    <script src="colors.js"></script> <!--colors.js릁 통해 파일을 쪼갬-->
+
+  <!--  <script>
       /*function nightDayHandler(self)
       {
         var target = document.querySelector('body');
@@ -44,6 +46,20 @@
         }
       }*/
 
+      var Links={               //객체 생성 2 -> 아래 LinksSetColor 함수 대체!
+        setColor:function(color)
+        {
+          var alist=document.querySelectorAll('a');
+          var i=0;
+          while(i<alist.length)
+          {
+            //console.log(alist[i]);
+            alist[i].style.color=color;
+            i++;
+          }
+        }
+      }*/
+
       function LinksSetColor(color)
       {
         var alist=document.querySelectorAll('a');
@@ -56,7 +72,18 @@
         }
       }
 
-      function BodySetColor(color)  //함수를 극한으로 사용하는 중
+      var Body={                    //객체 생성 1
+        setColor: function(color)   //객체에 함수 사용 -> 객체 바로 아래의 함수들 참고
+        {
+          document.querySelector('body').style.color=color;
+        },
+        setBackgroundColor:function(color)
+        {
+          document.querySelector('body').style.backgroundColor=color;
+        }
+      }
+
+      /*function BodySetColor(color)  //함수를 극한으로 사용하는 중
       {
         document.querySelector('body').style.color='color';
       }
@@ -64,7 +91,7 @@
       function BodySetBackgroundColor(color)  //함수를 극한으로 사용하는 중
       {
         document.querySelector('body').style.backgroundColor='color';
-      }
+      }*/
 
       function nightDayHandler(self)
       {
@@ -72,9 +99,11 @@
         if(self.value === 'night')
         {
           //target.style.backgroundColor='black';
-          BodySetBackgroundColor('black');
+          //BodySetBackgroundColor('black');  -> 객체 Body를 사용하면서 생략, 아래 참고
+          Body.setBackgroundColor('black');
           //target.style.color='white';
-          BodySetColor('white');
+          //BodySetColor('white');            -> 객체 Body를 사용하면서 생략, 아래 참고
+          Body.setColor('white');
           self.value = 'day';
 
           LinksSetColor('powderblue');
@@ -83,11 +112,12 @@
         else
         {
           //target.style.backgroundColor='white';
-          BodySetBackgroundColor('white');
+          //BodySetBackgroundColor('white');   -> 객체 Body를 사용하면서 생략, 아래 참고
+          Body.setBackgroundColor('white');
           //target.style.color='black';
-          BodySetColor('black');
+          //BodySetColor('black');              -> 객체 Body를 사용하면서 생략, 아래 참고
+          Body.setColor('black');
           self.value = 'night';
-
 
           LinksSetColor('blue');
 
@@ -95,6 +125,7 @@
       }
 
     </script>
+-->
 
   </head>
 

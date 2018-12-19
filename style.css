@@ -4,7 +4,8 @@ body
 }
 a
 {
-    color:black;
+    /*color:black;*/
+    color: blue;
     text-decoration: none;
 }
 #active
