@@ -1,23 +1,26 @@
 function LinksSetColor(color)
 {
-  var alist=document.querySelectorAll('a');
-  var i=0;
-  while(i<alist.length)
-  {
-    console.log(alist[i]);
-    alist[i].style.color=color;
-    i++;
-  }
+  // var alist=document.querySelectorAll('a');
+  // var i=0;
+  // while(i<alist.length)
+  // {
+  //   console.log(alist[i]);
+  //   alist[i].style.color=color;
+  //   i++;
+  // }
+  $('a').css('color',color);                    //jQuery 사용!!!!
 }
 
 var Body={                    //객체 생성 1
   setColor: function(color)   //객체에 함수 사용 -> 객체 바로 아래의 함수들 참고
   {
-    document.querySelector('body').style.color=color;
+    //document.querySelector('body').style.color=color;
+    $('body').css('color',color);               //jQuery 사용!!!!
   },
   setBackgroundColor:function(color)
   {
-    document.querySelector('body').style.backgroundColor=color;
+    //document.querySelector('body').style.backgroundColor=color;
+    $('body').css('backgroundColor',color);     //jQuery 사용!!!!
   }
 }
 
